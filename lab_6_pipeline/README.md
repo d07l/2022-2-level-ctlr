@@ -88,16 +88,16 @@ would mean that you have made tasks for mark `6` and request mentors to check if
    3. Pipeline tokenizes text in each file, removes punctuation, and casts it to the lower case
    (no *lemmatization* or *tagging*).
    4. Pipeline produces `N_cleaned.txt` files in the `tmp/articles`.
-        1. [Example raw text](../config/test_files/1_raw.txt) and
-           [Desired output](../config/test_files/reference_score_four_test.txt).
+        1. [Example raw text](../lab_6_pipeline/tests/test_files/1_raw.txt) and
+           [Desired output](../lab_6_pipeline/tests/test_files/reference_score_four_test.txt).
 2. Desired mark **6**:
    1. `pylint` level: `7/10`.
    2. All requirements for the mark **4**.
    3. Pipeline uses `pymystem3` library to perform lemmatization and POS tagging.
    4. Pipeline should define ID, FORM, LEMMA, and POS information in the resulting `.conllu` file.
    5. Pipeline produces `N_pos_conllu.conllu` files with text tagging for each article.
-        1. [Example raw text](../config/test_files/1_raw.txt) and
-           [Desired output](../config/test_files/reference_score_six_test.conllu).
+        1. [Example raw text](../lab_6_pipeline/tests/test_files/1_raw.txt) and
+           [Desired output](../lab_6_pipeline/tests/test_files/reference_score_six_test.conllu).
 3. Desired mark **8**:
    1. `pylint` level: `10/10`.
    2. All requirements for the mark **6**.
@@ -107,8 +107,8 @@ would mean that you have made tasks for mark `6` and request mentors to check if
    in the resulting `.conllu` file.
    5. Pipeline produces `N_morphological_conllu.conllu` files with extended morphological
    information for each article, e.g. word animacy.
-        1. [Example raw text](../config/test_files/1_raw.txt) and
-           [Desired output](../config/test_files/reference_score_eight_test.conllu).
+        1. [Example raw text](../lab_6_pipeline/tests/test_files/1_raw.txt) and
+           [Desired output](../lab_6_pipeline/tests/test_files/reference_score_eight_test.conllu).
 4. Desired mark **10**:
    1. `pylint` level: `10/10`.
    2. All requirements for the mark **8**.
@@ -116,15 +116,15 @@ would mean that you have made tasks for mark `6` and request mentors to check if
         1. Uses backup `pymorphy2` analyzer and backup tag converter for `NOUN` tags processing.
         2. Produces `N_full_conllu.conllu` files with extended morphological information
            for `NOUN` by `pymorphy2`.
-            1. [Example raw text](../config/test_files/1_raw.txt) and
-               [Desired output](../config/test_files/reference_score_ten_test.conllu)
+            1. [Example raw text](../lab_6_pipeline/tests/test_files/1_raw.txt) and
+               [Desired output](../lab_6_pipeline/tests/test_files/reference_score_ten_test.conllu)
    4. An additional pipeline is introduced `pos_frequency_pipeline.py` that:
         1. Collects frequencies of POS in each text.
         2. Extends `N_meta.json` files with this information.
         3. Visualizes this distribution as `.png` files that are created for each
          article and saved into `N_image.png` files.
-            1. [Example meta info](../config/test_files/1_meta.json) and
-               [Desired output](../config/test_files/reference_image.png)
+            1. [Example meta info](../lab_6_pipeline/tests/test_files/1_meta.json) and
+               [Desired output](../core_utils/tests/test_files/reference_image.png)
 
 ## Implementation tactics
 
@@ -283,8 +283,8 @@ To get a mark not lower than 4, your pipeline must perform basic text preprocess
 
 After implementation of preprocessing, your pipeline must save results in the files with the names
 following the pattern `N_cleaned.txt`. See examples for a better understanding:
-[Raw text](../config/test_files/1_raw.txt) -
-[Desired output](../config/test_files/reference_score_four_test.txt).
+[Raw text](../lab_6_pipeline/tests/test_files/1_raw.txt) -
+[Desired output](../lab_6_pipeline/tests/test_files/reference_score_four_test.txt).
 
 #### Stage 2.1. Implement simplified logic of `ConlluToken` abstraction
 
@@ -415,8 +415,8 @@ must perform morphological text analysis for each article using `pymystem3` libr
 save the result in the file with the name following the pattern `N_pos_conllu.conllu`.
 
 See examples for a better understanding:
-[Raw text](../config/test_files/1_raw.txt) -
-[Desired output](../config/test_files/reference_score_six_test.conllu).
+[Raw text](../lab_6_pipeline/tests/test_files/1_raw.txt) -
+[Desired output](../lab_6_pipeline/tests/test_files/reference_score_six_test.conllu).
 
 File with `.conllu` extension means that it corresponds to the UD format.
 Starting with the mark 6 you are required to save results of morphological text analysis in the UD
@@ -684,8 +684,8 @@ and save the result in the file with the name following the pattern
 `N_morphological_conllu.conllu`.
 
 See examples for a better understanding:
-[Raw text](../config/test_files/1_raw.txt) -
-[Desired output](../config/test_files/reference_score_eight_test.conllu).
+[Raw text](../lab_6_pipeline/tests/test_files/1_raw.txt) -
+[Desired output](../lab_6_pipeline/tests/test_files/reference_score_eight_test.conllu).
 
 > NOTE: For mark 8 your pipeline should fill FEATS alongside ID, FORM, LEMMA, and POS
 > fields information in the resulting `.conllu` file.

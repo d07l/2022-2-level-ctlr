@@ -9,7 +9,7 @@ import pytest
 
 import core_utils.article.article as article_instance
 import lab_6_pipeline.pos_frequency_pipeline as pos_freq_pipe
-from config.test_params import TEST_FILES_FOLDER, TEST_PATH
+from config.test_params import PIPE_TEST_FILES_FOLDER, TEST_PATH
 from core_utils.article.article import ArtifactType
 from lab_6_pipeline.pipeline import CorpusManager
 from lab_6_pipeline.pos_frequency_pipeline import (EmptyFileError,
@@ -28,7 +28,7 @@ class PosFrequencyPipelineTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         pipeline_test_files_setup()
-        shutil.copyfile(TEST_FILES_FOLDER /
+        shutil.copyfile(PIPE_TEST_FILES_FOLDER /
                         "reference_score_six_test.conllu",
                         TEST_PATH /
                         f"1_{ArtifactType.MORPHOLOGICAL_CONLLU.value}.conllu")

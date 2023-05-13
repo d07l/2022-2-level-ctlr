@@ -9,7 +9,7 @@ from pathlib import Path
 import pytest
 from pymorphy2 import MorphAnalyzer
 
-from config.test_params import TEST_FILES_FOLDER, TEST_PATH
+from config.test_params import PIPE_TEST_FILES_FOLDER, TEST_PATH
 from core_utils.article import article
 from core_utils.article.ud import TagConverter
 from lab_6_pipeline.pipeline import (AdvancedMorphologicalAnalysisPipeline,
@@ -86,12 +86,12 @@ class AdvancedMorphologicalAnalysisPipelineTest(unittest.TestCase):
         self.pipeline.run()
         self.raw_text = corpus_manager.get_articles()[1].get_raw_text()
 
-        path = TEST_FILES_FOLDER / 'reference_score_ten_test.conllu'
+        path = PIPE_TEST_FILES_FOLDER / 'reference_score_ten_test.conllu'
         with path.open('r', encoding='utf-8') as ref:
             self.conllu_reference = ref.read()
         self.expected_text_w_morph = self.conllu_reference
 
-        path = TEST_FILES_FOLDER / 'reference_score_ten_wo_morph_test.conllu'
+        path = PIPE_TEST_FILES_FOLDER / 'reference_score_ten_wo_morph_test.conllu'
         with path.open('r', encoding='utf-8') as ref:
             self.conllu_reference = ref.read()
         self.expected_text_wo_morph = self.conllu_reference

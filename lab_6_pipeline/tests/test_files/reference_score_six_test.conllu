@@ -1,0 +1,20 @@
+# sent_id = 0
+# text = Красивая - мама красиво, училась в ПДД и ЖКУ по адресу Львовская 10 лет с почтой test .
+1	Красивая	красивый	ADJ	_	_	0	root	_	_
+2	мама	мама	NOUN	_	_	0	root	_	_
+3	красиво	красиво	ADV	_	_	0	root	_	_
+4	училась	учиться	VERB	_	_	0	root	_	_
+5	в	в	ADP	_	_	0	root	_	_
+6	ПДД	пдд	NOUN	_	_	0	root	_	_
+7	и	и	CCONJ	_	_	0	root	_	_
+8	ЖКУ	жку	NOUN	_	_	0	root	_	_
+9	по	по	ADP	_	_	0	root	_	_
+10	адресу	адрес	NOUN	_	_	0	root	_	_
+11	Львовская	львовский	ADJ	_	_	0	root	_	_
+12	10	10	NUM	_	_	0	root	_	_
+13	лет	год	NOUN	_	_	0	root	_	_
+14	с	с	ADP	_	_	0	root	_	_
+15	почтой	почта	NOUN	_	_	0	root	_	_
+16	test	test	X	_	_	0	root	_	_
+17	.	.	PUNCT	_	_	0	root	_	_
+

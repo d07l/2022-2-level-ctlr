@@ -2,8 +2,6 @@ set -x
 
 source venv/bin/activate
 
-FAILED=0
-
 export PYTHONPATH=$(pwd):$PYTHONPATH
 python config/skip_check.py --pr_name "$1" --pr_author "$2" --lab_path "lab_5_scrapper"
 if [ $? -eq 0 ]; then
@@ -18,15 +16,9 @@ python lab_5_scrapper/scrapper.py
 
 if [[ $? -ne 0 ]]; then
   echo "Check failed for common files."
-  FAILED=1
+  exit 1
 else
   echo "Check passed for common files."
-fi
-
-
-if [[ ${FAILED} -eq 1 ]]; then
-  echo "Check failed."
-  exit ${FAILED}
 fi
 
 echo "Collected dataset"

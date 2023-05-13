@@ -13,4 +13,5 @@ TEST_PATH = PROJECT_ROOT / 'test_tmp'
 TEST_SCRAPPER_CONFIG = 'scrapper_config_test.json'
 TEST_CRAWLER_CONFIG_PATH = TEST_PATH / TEST_SCRAPPER_CONFIG
 
-TEST_FILES_FOLDER = PROJECT_ROOT / 'config' / 'test_files'
+PIPE_TEST_FILES_FOLDER = PROJECT_ROOT / 'lab_6_pipeline' / 'tests' / 'test_files'
+CORE_UTILS_TEST_FILES_FOLDER = PROJECT_ROOT / 'core_utils' / 'tests' / 'test_files'

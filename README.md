@@ -49,7 +49,7 @@ Instructors:
 | 17.03.2023 | **Seminar:** 3rd party libraries.                   | N/A                          |
 | 20.03.2023 | **Lecture:** Requests and `HTML`.                   | [Listing][8]                 |
 | 24.03.2023 | **Seminar:** Headers and introduction to `bs4`.     | [Listing][12]                |
-| 27.03.2023 | **EXAM WEEK:** skipping lecture and seminars        | N/A                          |
+| 27.03.2023 | **EXAM WEEK:** skipping lecture and seminars.       | N/A                          |
 | 03.04.2023 | **Lecture:** Access file system via `pathlib`.      | [Listing][13], [Listing][14] |
 | 07.04.2023 | **Seminar:** Early version of `HTMLParser`.         | [Listing][15]                |
 | 10.04.2023 | **Lecture:** Working with dates via `datetime`.     | [Listing][16]                |
@@ -57,6 +57,11 @@ Instructors:
 | 17.04.2023 | **Lecture:** Assignment no. 6: concept and details. | N/A                          |
 | 21.04.2023 | **Seminar:** `CorpusManager` implementation.        | N/A                          |
 | 24.04.2023 | **Lecture:** Automated morphological analysis.      | [Listing][17], [Listing][18] |
+| 28.04.2023 | **Seminar:** `pymystem3`API.                        | [Listing][17], [Listing][18] |
+| 01.05.2023 | **HOLIDAYS:** skipping lecture and seminars.        | N/A                          |
+| 05.05.2023 | **HOLIDAYS:** skipping lecture and seminars.        | N/A                          |
+| 08.05.2023 | **HOLIDAYS:** skipping lecture and seminars.        | N/A                          |
+| 12.05.2023 | **Second deadline:** pipeline assignment.           | N/A                          |
 
 You can find a more complete summary from lectures as a
 [list of topics](./docs/public/lectures_content.md).

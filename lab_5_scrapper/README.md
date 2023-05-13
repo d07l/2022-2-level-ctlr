@@ -403,7 +403,9 @@ A call to this method results in filling the internal Article instance with text
 > NOTE: It is very likely that the text on pages of a chosen website is split across different
 > HTML blocks, make sure to collect text from them all.
 
-### Stage 5. Save article (Stages 0-4 are required to get the mark 4)
+### Stage 5. Save article
+
+#### (Stages 0-5 are required to get the mark 4)
 
 Make sure that you save each `Article` object as a text file on the file system by
 using the appropriate API method `to_raw` from [IO module](../docs/public/article.md):
@@ -416,7 +418,9 @@ As we return the `Article` instance from the `parse` method, saving the article 
 scope of an `HTMLParser`. This means that you need to save the articles in the place where you
 call `HTMLParser.parse()`.
 
-### Stage 6. Collect basic article metadata (Stages 0-5 are required to get the mark 6)
+### Stage 6. Collect basic article metadata
+
+#### (Stages 0-6 are required to get the mark 6)
 
 According to the [dataset definition](../docs/public/dataset.md), the dataset that is generated
 by your code should contain meta-information about each article including its id, title, author.
@@ -478,7 +482,9 @@ leave this list empty.
 You should extend `HTMLParser` method `_fill_article_with_meta_information`
 with date manipulations and topics extraction.
 
-### Stage 8. Determine the optimal number of seed URLs (Stages 0-7 are required to get the mark 8)
+### Stage 8. Determine the optimal number of seed URLs
+
+#### (Stages 0-8 are required to get the mark 8)
 
 As it was stated in Stage 2.1, "Crawler is an entity that visits `seed_urls` with the
 intention to collect URLs with articles that should be parsed later." Often you can

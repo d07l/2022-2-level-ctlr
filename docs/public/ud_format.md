@@ -115,6 +115,7 @@ the resulting string for our example would be:
 
 > **HINT**: It's mandatory to use `Loc` mapping for pymystem3 `пр` case because
 > in Slavic languages this is the only case that is used exclusively in combination with prepositions.
+> A more detailed information you san see [here](https://universaldependencies.org/ru/feat/Case.html).
 
 ### <a name="pymorphy"></a>PyMorphy
 

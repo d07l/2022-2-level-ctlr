@@ -11,7 +11,7 @@ try:
 except ImportError:
     print('No libraries installed. Failed to import.')
 
-from config.test_params import TEST_FILES_FOLDER, TEST_PATH
+from config.test_params import CORE_UTILS_TEST_FILES_FOLDER, TEST_PATH
 from core_utils.article.article import Article
 from core_utils.article.io import from_meta
 from core_utils.visualizer import visualize
@@ -25,10 +25,10 @@ class VisualizeTest(unittest.TestCase):
     # pylint: disable=assignment-from-no-return
     def setUp(self) -> None:
         TEST_PATH.mkdir(exist_ok=True)
-        self.path_to_ref_image = TEST_FILES_FOLDER / 'reference_image.png'
+        self.path_to_ref_image = CORE_UTILS_TEST_FILES_FOLDER / 'reference_image.png'
         self.path_to_save = TEST_PATH / '0_image.png'
 
-        path_to_meta = TEST_FILES_FOLDER / '1_meta.json'
+        path_to_meta = CORE_UTILS_TEST_FILES_FOLDER / '1_meta.json'
         self.article = from_meta(path_to_meta)
 
         visualize(self.article, self.path_to_save)

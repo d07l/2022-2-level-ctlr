@@ -6,7 +6,7 @@ import unittest
 
 import pytest
 
-from config.test_params import TEST_FILES_FOLDER, TEST_PATH
+from config.test_params import PIPE_TEST_FILES_FOLDER, TEST_PATH
 from core_utils.article.article import Article
 from lab_6_pipeline.pipeline import CorpusManager
 from lab_6_pipeline.tests.utils import pipeline_test_files_setup
@@ -67,7 +67,7 @@ class ArticleInstanceCreationBasicTest(unittest.TestCase):
         """
         Ensure that CorpusManager does not work with files with corrupted names.
         """
-        shutil.copyfile(TEST_FILES_FOLDER / "1_raw.txt",
+        shutil.copyfile(PIPE_TEST_FILES_FOLDER / "1_raw.txt",
                         TEST_PATH / "None.txt")
         new_corpus_manager = CorpusManager(path_to_raw_txt_data=TEST_PATH)
         self.assertEqual(len(new_corpus_manager.get_articles()), 1)
